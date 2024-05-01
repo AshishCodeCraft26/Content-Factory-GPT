@@ -1,0 +1,8 @@
+streamlit
+langchain
+groq
+langchain-groq
+python-dotenv
+openpyxl
+stqdm
+xlsxwriter
