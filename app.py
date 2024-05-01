@@ -168,7 +168,6 @@ if uploaded_file is not None:
         # Create an empty DataFrame to store the generated texts
         df = pd.DataFrame(columns=['Product', 'Gender','Size','Age','Color','Style','Feature','Brand','Material','Short Description','Long Description'])
 
-        # result_li = []
         
         # Show processing animation
         with st.spinner("Content Generation in Progress...."):
@@ -181,7 +180,6 @@ if uploaded_file is not None:
                     user_prompt_long = f"Please generate a 1024 character description for a {Product} for a {selected_attributes[0]['Gender']}, between the ages of {selected_attributes[0]['Age']}, the {Product} is {Color} in color, {Style}, with a {Feature}, the brand is {selected_attributes[0]['Brand']}, has a {Material} material, available in {Size} size. The description text is being used by a retailer promoting {selected_attributes[0]['Brand_Statement']}."
                     generated_text_short = parse_text(generate(model, user_prompt_short))
                     generated_text_long = parse_text(generate(model, user_prompt_long))
-                    # result_li.append(generated_text)
 
                     
                     # Append the generated text directly to the DataFrame
