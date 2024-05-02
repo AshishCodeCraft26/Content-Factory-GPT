@@ -19,7 +19,6 @@ load_dotenv()
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-print(groq_api_key)
 
 def get_prompt():
 
@@ -144,9 +143,8 @@ if uploaded_file is not None:
         pass
     
     
-    model = 'llama3-70b-8192'
-    # model = 'llama2-70b-4096'
-    # model = 'Mixtral-8x7b-32768'
+    model = 'llama3-8b-8192'
+
 
     main_headings = {}
     for _, row in attribute_df.iterrows():
